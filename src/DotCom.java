@@ -1,15 +1,15 @@
 import java.util.ArrayList;
 public class DotCom {
-    private ArrayList<String> locationCells;
+    private ArrayList<Integer> locationCells;
     int numOfHits = 0;
 
-    public void setLocationCells(ArrayList<String> locs) {
+    public void setLocationCells(ArrayList<Integer> locs) {
         locationCells = locs;
     }
 
     public String checkYourself(String userInput) {
-         String result = "Мимо";
-        int index = locationCells.indexOf(userInput);
+        String result = "Мимо";
+        int index = locationCells.indexOf(Integer.parseInt(userInput));
         if (index >= 0){
             locationCells.remove(index);
             if (locationCells.isEmpty()){
