@@ -2,7 +2,7 @@ import java.util.*;
 
 public class DotComBust {
     private GameHelper helper = new GameHelper();
-    private ArrayList<DotCom> dotComsList = new ArrayList<DotCom>();
+    private ArrayList<DotCom> dotComsList = new ArrayList<>();
     private int numOfGuesses = 0;
 
     private void setUpGame () {
@@ -12,7 +12,10 @@ public class DotComBust {
         two.setName ("eToys.com");
         DotCom three = new DotCom();
         three.setName ("Go2.com");
-        dotComsList.add(one, two, three);
+        dotComsList.add(one);
+        dotComsList.add(two);
+        dotComsList.add(three);
+        dotComsList.addAll(Arrays.asList(one, three, two));
 
         System.out.println("Ваша цель - потопить три коробля.");
         System.out.println("Pets.com, eToys.com, Go2.com");
