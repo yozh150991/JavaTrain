@@ -27,7 +27,7 @@ public class GameHelper {
         String[] alphacoords = new String[comSize];
         String temp = null;
         int[] coords = new int[comSize];
-        int attemps = 0;
+        int attempts = 0;
         boolean success = false;
         int location = 0;
         comCount++;
@@ -35,7 +35,7 @@ public class GameHelper {
         if ((comCount % 2) == 1) {
             incr = gridLength;
         }
-        while (!success & attemps++ <200){
+        while (!success & attempts++ <200){
             location = (int) (Math.random() * gridSize);
             //System.out.print("Пробуем" + location);
             int x = 0;

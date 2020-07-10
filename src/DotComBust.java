@@ -12,12 +12,12 @@ public class DotComBust {
         two.setName ("eToys.com");
         DotCom three = new DotCom();
         three.setName ("Go2.com");
-        dotComsList.add(one);
+        /*dotComsList.add(one);
         dotComsList.add(two);
-        dotComsList.add(three);
+        dotComsList.add(three);*/
         dotComsList.addAll(Arrays.asList(one, three, two));
 
-        System.out.println("Ваша цель - потопить три коробля.");
+        System.out.println("Ваша цель - пота1опить три коробля.");
         System.out.println("Pets.com, eToys.com, Go2.com");
         System.out.println("Попытайтесь их потопить заминимальное количество ходов");
 
@@ -35,13 +35,13 @@ public class DotComBust {
     }
     private void checkUserGuess (String userGuess){
         numOfGuesses++;
-        String result = "Мимо";
+        String result = "Miss";
         for (DotCom dotComToTest : dotComsList) {
             result = dotComToTest.checkYourself(userGuess);
             if (result.equals("Попал")) {
                 break;
             }
-            if (result.equals("Потопил")) {
+            if (result.equals("Hit")) {
                 dotComsList.remove(dotComToTest);
                 break;
             }
@@ -51,9 +51,9 @@ public class DotComBust {
     private void finishGame (){
         System.out.println("Все сайті пропали!");
         if (numOfGuesses <= 18) {
-            System.out.println("Это заняло у вас всего" + numOfGuesses + "попыток");
+            System.out.println("Это заняло у вас всего " + numOfGuesses + "попыток");
         } else {
-            System.out.println("Это заняло у вас довольно много времени. А именно" + numOfGuesses + "попыток");
+            System.out.println("Это заняло у вас довольно много времени. А именно " + numOfGuesses + "попыток");
         }
     }
 
